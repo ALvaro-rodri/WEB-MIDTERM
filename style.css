@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "montserrat";
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #9e9e9e;
+}
