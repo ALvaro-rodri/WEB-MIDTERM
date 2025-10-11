@@ -11,7 +11,7 @@
     font-style: normal;
 }
 /* COMIENZO DE PAGINA */
-body {
+body,html {
     background-color: #9e9e9e;
     font-family: "inter", sans-serif;
     margin: 0px;
@@ -115,4 +115,28 @@ header {
     width: 3cm;
     border-radius: 5px;
     padding: 0.5vw;
+}
+
+/* CARROSULES DE OTRAS NOTICIAS */
+
+.carrousel-news {
+    margin: 16px 16px;
+    padding: 0px;
+}
+
+.news-container {
+    margin: 0vw 1vw;
+}
+
+.list-news {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-news a {
+    text-decoration: none;
+    
 }
