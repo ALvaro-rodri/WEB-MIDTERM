@@ -24,6 +24,8 @@ header {
     align-items: center;
     padding: 0px 20px;
     justify-content: space-between;
+    height: 1.5cm;
+    border-bottom: 3px solid #607d8b;
     
 }
 
@@ -31,18 +33,20 @@ header {
     width: 30px;
     height: auto;
     border-radius: 30px;
+    border: 3px solid #607d8b;
 }
 
 .navbar {
     padding: 0px;
-    margin-left: 16%;
+    margin-left: 11vw;
     letter-spacing: 1.5px;
     font-size: 10PX;    
 }
 
 .navbar-list {
     list-style: none;
-    display: flex;   
+    display: flex;
+    font-family: "inter";   
 }
 
 .navbar-list a {
@@ -65,11 +69,11 @@ header {
     opacity: 30%;
 }
 .name-web {
-    font-size: 15px;
-    margin-right: 5vw;
+    font-size: 16px;
+    margin-right: 0vw;
     letter-spacing: 2px;
     word-spacing: 3px;
-    text-decoration: underline;
-    color: #aadbf3;
+    color: #aae3ff;
     font-weight: bold;
+    font-family: "montserrat";
 }
