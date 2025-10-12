@@ -116,12 +116,16 @@ header {
 /* CARROSULES DE OTRAS NOTICIAS */
 
 .carrousel-news {
-    margin: 16px 16px;
-    padding: 0px;
+    background-color: #616161;
+    margin:16px 16px;
+    border-radius: 10px;
+    font-family: "inter";
+    color: white;
+    border: 2px solid #607d8b;
 }
 
 .news-container {
-    margin: 0vw 1vw;
+    margin: 1.5vw 2vw;
 }
 
 .list-news {
@@ -134,4 +138,13 @@ header {
 
 .list-news a {
     text-decoration: none;
+}
+
+.list-news li {
+    background-color: #aae3ff;
+    width: 15vw;
+    height: 18vh;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
 }
