@@ -148,3 +148,36 @@ header {
     display: grid;
     place-items: center;
 }
+
+/* EXPERIMENT */
+
+.experiment {
+    background-color: #616161;
+    margin:16px 16px;
+    border-radius: 10px;
+    font-family: "inter";
+    color: white;
+    border: 2px solid #607d8b;
+    display: flex;
+}
+
+.container-experiment {
+    margin-left: 1vw;
+    margin-right: 10vw
+}
+
+.title-exp {
+    font-family: "montserrat";
+    font-size: 42px;
+}
+
+.grid-img-experiment {
+    padding: 1vw 3vw;
+    border-left: 5px solid #607d8b;
+}
+
+.grid-img-experiment img {
+    width: 3cm;
+    border-radius: 5px;
+    padding: 0.5vw;
+}
