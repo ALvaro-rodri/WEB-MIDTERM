@@ -97,7 +97,9 @@ header {
 
 .container-main-new {
     margin-left: 1vw;
-    margin-right: 10vw
+    margin-right: 10vw;
+    max-width: 72vw;
+    min-width: 72vw;
 }
 
 .title-new {
@@ -107,7 +109,7 @@ header {
 
 .grid-img-new {
     padding: 1vw 3vw;
-    border-left: 5px solid #607d8b;
+    border-left: 2px solid #607d8b;
 }
 
 .grid-img-new img {
@@ -166,7 +168,8 @@ header {
 
 .container-experiment {
     margin-left: 1vw;
-    margin-right: 10vw
+    margin-right: 10vw;
+    min-width: 72vw;
 }
 
 .title-exp {
@@ -176,7 +179,7 @@ header {
 
 .grid-img-experiment {
     padding: 1vw 3vw;
-    border-left: 5px solid #607d8b;
+    border-left: 2px solid #607d8b;
 }
 
 .grid-img-experiment img {
@@ -191,4 +194,7 @@ footer {
     background-color: #616161;
     padding: 0;
     margin: 0;
+    height: 1.5cm;
+    border-top: 2px solid #607d8b;
+    text-align: center;
 }
