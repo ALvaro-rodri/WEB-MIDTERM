@@ -21,17 +21,18 @@ body, html {
     height: 100%;
 }
 
+img { max-width: 100%; height: auto; display: block; }
+
 /* HEADER */
+
 header {
     background-color: #616161;
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 12px 20px;
     justify-content: space-between;
-    height: 1.5cm;
     border-bottom: 3px solid #607d8b;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0;
 }
 
 .img-logo {
@@ -42,17 +43,23 @@ header {
 }
 
 .navbar {
-    padding: 0px;
-    margin-left: 11vw;
+    padding: 0;
+    margin-left: 0;
     letter-spacing: 1.5px;
-    font-size: 10PX;    
+    font-size: 14px;
 }
 
 .navbar-list {
     list-style: none;
     display: flex;
-    font-family: "inter";   
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
+
 
 .navbar-list a {
     text-decoration: none;
@@ -62,11 +69,12 @@ header {
 }
 
 .navbar-list a:hover {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .navbar-list a:active {
     color: #9e9e9e;
+    font-size: 12px;
 }
 
 .navbar-list-separate {
@@ -87,19 +95,20 @@ header {
 
 .main-new {
     background-color: #616161;
-    margin:16px 16px;
+    margin: 16px;
     border-radius: 10px;
     font-family: "inter";
     color: white;
     border: 2px solid #607d8b;
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .container-main-new {
-    margin-left: 1vw;
-    margin-right: 10vw;
-    max-width: 72vw;
-    min-width: 72vw;
+    flex: 1 1 520px;
+    margin: 0 16px;
+    min-width: 0;
 }
 
 .title-new {
@@ -108,14 +117,18 @@ header {
 }
 
 .grid-img-new {
-    padding: 1vw 3vw;
+    padding: 12px 20px;
     border-left: 2px solid #607d8b;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .grid-img-new img {
-    width: 3cm;
+    width: 100%;
+    max-width: 140px;
     border-radius: 5px;
-    padding: 0.5vw;
+    padding: 6px;
 }
 
 /* CARROSULES DE OTRAS NOTICIAS */
@@ -130,46 +143,50 @@ header {
 }
 
 .news-container {
-    margin: 1.5vw 2vw;
+    margin: 16px 20px;
 }
 
 .list-news {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
 }
 
 .list-news a {
     text-decoration: none;
+    font-weight: bold;
+    color: #263238;
 }
 
 .list-news li {
     background-color: #aae3ff;
-    width: 15vw;
-    height: 18vh;
     border-radius: 10px;
     display: grid;
     place-items: center;
+    height: 140px;
 }
 
 /* EXPERIMENT */
 
 .experiment {
     background-color: #616161;
-    margin:16px 16px;
+    margin: 16px;
     border-radius: 10px;
     font-family: "inter";
     color: white;
     border: 2px solid #607d8b;
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .container-experiment {
-    margin-left: 1vw;
-    margin-right: 10vw;
-    min-width: 72vw;
+    flex: 1 1 520px;
+    margin: 0 16px;
+    min-width: 0;
 }
 
 .title-exp {
@@ -178,23 +195,74 @@ header {
 }
 
 .grid-img-experiment {
-    padding: 1vw 3vw;
+    padding: 12px 20px;
     border-left: 2px solid #607d8b;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .grid-img-experiment img {
-    width: 3cm;
+    width: 100%;
+    max-width: 140px;
     border-radius: 5px;
-    padding: 0.5vw;
+    padding: 6px;
 }
 
 /* FOOTER */
 
 footer {
     background-color: #616161;
-    padding: 0;
-    margin: 0;
-    height: 1.5cm;
     border-top: 2px solid #607d8b;
     text-align: center;
+    padding: 12px 20px;
+    margin: 0;
+}
+
+/* AJUSTES PARA RESPONSIVE */
+
+.navbar-list a:hover { opacity: 0.85; }
+
+
+@media (max-width: 1024px) {
+  .list-news { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+  .navbar-list-separate { display: none; }
+}
+
+@media (max-width: 768px) {
+  header { 
+        flex-wrap: wrap; gap: 8px; 
+    }
+  .name-web { 
+        font-size: 14px; 
+    }
+
+  .grid-img-new, .grid-img-experiment {
+    border-left: none;
+    border-top: 2px solid #607d8b;
+    padding-top: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title-new, .title-exp { font-size: 32px; }
+}
+
+@media (max-width: 480px) {
+  .navbar-list { 
+        gap: 8px; 
+    }
+  .navbar-list a { 
+        padding: 0 8px; font-size: 13px; 
+    }
+
+  .grid-img-new, .grid-img-experiment {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+  .list-news { 
+        grid-template-columns: 1fr; 
+    }
+  .title-new, .title-exp { 
+        font-size: 28px; 
+    }
 }
