@@ -21,7 +21,13 @@ body, html {
     height: 100%;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { 
+    width: 100%;
+    height: 130px; /* puedes ajustar el alto según tu diseño */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px; /* opcional: bordes redondeados */ 
+}
 
 /* HEADER */
 
@@ -137,7 +143,6 @@ header {
     background-color: #616161;
     margin:16px 16px;
     border-radius: 10px;
-    font-family: "inter";
     color: white;
     border: 2px solid #607d8b;
 }
@@ -159,14 +164,21 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: #263238;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    font-family: "montserrat";
 }
 
 .list-news li {
-    background-color: #aae3ff;
+    background: linear-gradient(135deg, #55c3fa, #aae3ff);
     border-radius: 10px;
     display: grid;
     place-items: center;
     height: 140px;
+}
+.list-news li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* EXPERIMENT */
@@ -221,12 +233,18 @@ footer {
 
 /* AJUSTES PARA RESPONSIVE */
 
-.navbar-list a:hover { opacity: 0.85; }
+.navbar-list a:hover { 
+    opacity: 0.85; 
+}
 
 
 @media (max-width: 1024px) {
-  .list-news { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
-  .navbar-list-separate { display: none; }
+  .list-news { 
+    grid-template-columns: repeat(3, minmax(140px, 1fr)); 
+}
+  .navbar-list-separate { 
+    display: none; 
+}
 }
 
 @media (max-width: 768px) {
@@ -244,7 +262,9 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .title-new, .title-exp { font-size: 32px; }
+  .title-new, .title-exp { 
+    font-size: 32px; 
+}
 }
 
 @media (max-width: 480px) {
