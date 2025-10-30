@@ -82,14 +82,14 @@
                 El proyecto, bautizado como VocalSys, combina reconocimiento de voz basado en Whisper con un modelo semántico personalizado entrenado en terminología técnica. A través de un micrófono y una interfaz de consola virtual, los administradores pueden ejecutar comandos como:
                 <br>
                 <br>
-            <ul>
+                <ul>
                 <li>“Reinicia el servicio Nginx en el servidor principal.”</li>
 
                 <li>“Muestra los logs de errores de la base de datos.”</li>
 
                 <li>“Despliega el contenedor de backup en el nodo 3.”</li>
-            </ul>
-            <br>
+                </ul>
+                <br>
                 El sistema traduce las órdenes habladas en comandos Shell o API calls, que luego ejecuta en la infraestructura. Según los investigadores, la tasa de éxito ronda el 87% de precisión, aunque los errores aumentan cuando se usan términos ambiguos o acentos poco comunes.
 
                 El mayor desafío fue lograr que el modelo entendiera los nombres técnicos y rutas complejas, ya que expresiones como “/var/log/syslog” o “grep -r ‘error’ /etc” no son naturales para un modelo de voz tradicional. Para ello, entrenaron una capa de traducción fonética que convierte fonemas en tokens específicos.
